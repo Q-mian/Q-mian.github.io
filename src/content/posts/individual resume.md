@@ -8,7 +8,7 @@ body {
     font-family: "Times New Roman", Times, serif;
 }
 </style>
-<img src="./_assets/qmian.png" width="100" align="right" />
+<img src="/og/qmian.png" width="100" align="right" />
 
 ## Mingyuan Qin
 
@@ -17,7 +17,7 @@ body {
 ## Education
 
 <div align="left">
-    <img src="./_assets/hust.png" width="100" style="float:left; margin-right:15px;" />
+    <img src="/og/hust.png" width="100" style="float:left; margin-right:15px;" />
     <div style="display:inline-block;">
         2022-2026<br/>
         B.Eng of Artificial Intelligence<br/>
@@ -26,7 +26,7 @@ body {
 
 ## Research
 <div align="left">
-    <img src="./_assets/Langya.jpg" width="50" style="float:left; margin-right:15px;" />
+    <img src="/og/Langya.jpg" width="50" style="float:left; margin-right:15px;" />
     <div style="display:inline-block;">
         Oct.2023-now,<b>Vision Group Member</b><br/>
         LangYa, RoboMaster Team of HUST<br/>
