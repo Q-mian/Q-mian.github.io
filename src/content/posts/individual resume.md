@@ -14,7 +14,6 @@ body {
 
 **Research interests**: Multimodal Large Language Model,  Machine Learning, Computer Vision and Robotics.
 
----
 
 ## Education
 
@@ -25,8 +24,6 @@ body {
         B.Eng of Artificial Intelligence Huazhong University of Science and Technology<br/>
 </div>
 
----
-
 ## Research
 <div align="left">
     <img src="/og/Langya.jpg" width="50" style="float:left; margin-right:15px;" />
@@ -36,7 +33,6 @@ body {
         Supervised by Dr. Yujiang Zeng<br/>
 </div>
 
----
 ## Awards
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
