@@ -21,7 +21,9 @@ body {
     <img src="/og/hust.png" width="100" style="float:left; margin-right:15px;" />
     <div style="display:inline-block;">
         2022-2026<br/>
-        B.Eng of Artificial Intelligence Huazhong University of Science and Technology<br/>
+        B.Eng of Artificial Intelligence HUST<br/>
+        GRADE: 97.31/106, Rank: 1/122<br/>
+        <br/>
 </div>
 
 ## Research
@@ -31,6 +33,7 @@ body {
         <b>LangYa, RoboMaster Team of HUST</b><br/>
         Oct.2023-now,Vision Group Member<br/>
         Supervised by Dr. Yujiang Zeng<br/>
+        <br/>
 </div>
 
 ## Awards
