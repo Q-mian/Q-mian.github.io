@@ -3,107 +3,81 @@ title: 'Individual resume'
 pubDate: '2025-09-14'
 ---
 
-Chiri is a minimal blog theme built with [Astro](https://astro.build), offering customization options while preserving its clean aesthetic.
-
----
-
-## Basic Commands
-
-- `pnpm new <title>` - Create a new post (use `_title` for drafts)
-- `pnpm update-theme` - Update the theme to the latest version
-
-## Main Files & Directories
-
-- `src/content/about/about.md` - Edit the about section of the index page. Leave it empty if you don't want any content.
-- `src/content/posts/` - All blog posts are stored here
-- `src/config.ts` - Configure main site info and settings
-
-```ts
-// Site Info
-site: {
-  website: 'https://astro-chiri.netlify.app/', // Site domain
-  title: 'CHIRI', // Site title
-  author: '3ASH', // Author name
-  description: 'Minimal blog built by Astro', // Site description
-  language: 'en-US' // Default language
-},
-```
-
-```ts
-// General Settings
-general: {
-  contentWidth: '35rem', // Content area width
-  centeredLayout: true, // Use centered layout (false for left-aligned)
-  themeToggle: false, // Show theme toggle button (uses system theme by default)
-  postListDottedDivider: false, // Show dotted divider in post list
-  footer: true, // Show footer
-  fadeAnimation: true // Enable fade animations
-},
-```
-
-```ts
-// Date Settings
-date: {
-  dateFormat: 'YYYY-MM-DD', // Date format: YYYY-MM-DD, MM-DD-YYYY, DD-MM-YYYY, MONTH DAY YYYY, DAY MONTH YYYY
-  dateSeparator: '.', // Date separator: . - / (except for MONTH DAY YYYY and DAY MONTH YYYY)
-  dateOnRight: true // Date position in post list (true for right, false for left)
-},
-```
-
-```ts
-// Post Settings
-post: {
-  readingTime: false, // Show reading time in posts
-  toc: true, // Show table of contents (when there is enough page width)
-  imageViewer: true, // Enable image viewer
-  copyCode: true, // Enable copy button in code blocks
-  linkCard: true // Enable link card
+<style>
+body {
+    font-family: "Times New Roman", Times, serif;
 }
-```
+</style>
+<img src="./_assets/qmian.png" width="100" align="right" />
 
-## Post Frontmatter
+## Mingyuan Qin
 
-Only `title` and `pubDate` are required fields
+**Research interests**: Multimodal Large Language Model,  Machine Learning, Computer Vision and Robotics.
 
-```ts
----
-title: 'Post Title'
-pubDate: '2025-07-10'
----
-```
+## Education
 
-## Syntax Highlighting
+<div align="left">
+    <img src="./_assets/hust.png" width="100" style="float:left; margin-right:15px;" />
+    <div style="display:inline-block;">
+        2022-2026<br/>
+        B.Eng of Artificial Intelligence<br/>
 
-You can configure the theme via `shikiConfig` in `astro.config.ts`.
+</div>
 
-More details: [Syntax Highlighting | Astro Docs](https://docs.astro.build/en/guides/syntax-highlighting/)
+## Research
+<div align="left">
+    <img src="./_assets/Langya.jpg" width="50" style="float:left; margin-right:15px;" />
+    <div style="display:inline-block;">
+        Oct.2023-now,<b>Vision Group Member</b><br/>
+        LangYa, RoboMaster Team of HUST<br/>
+        Supervised by Dr. Yujiang Zeng<br/>
+<br/> <!-- 这里添加分行符号 -->
+</div>
 
-```ts
-import { defineConfig } from 'astro/config'
 
-export default defineConfig({
-  markdown: {
-    shikiConfig: {
-      light: 'github-light',
-      dark: 'github-dark',
-      wrap: false
-    }
-  }
-})
-```
+## Awards
+<table style="width: 100%;">
+<tr>
+    <td align="left" style="width: 30%;">Aug. 2025</td>
+    <td align="right" style="width: 70%;">
+        RoboMaster University Championship<br/>
+        | <b>National Second Prize</b>
+    </td>
+</tr>
+<tr>
+    <td align="left" style="width: 30%;">Oct. 2024</td>
+    <td align="right" style="width: 70%;">
+        DIGIX Global AI Challenge<br/>
+        | <b>National Third Prize</b>
+    </td>
+</tr>
 
----
+<tr>
+    <td align="left" style="width: 30%;">Aug. 2024</td>
+    <td align="right" style="width: 70%;">
+        Embedded Chip and System Design Competition<br/>
+        | <b>National Third Prize</b>
+    </td>
+</tr>
+</table>
 
-## Preview of Some Features
 
-![Theme Toggle](./_assets/theme-toggle.png)
+## Honors
+<table style="width: 100%;">
+<tr>
+    <td align="left" style="width: 30%;">Oct. 2024</td>
+    <td align="right" style="width: 70%;">
+        National Scholarship for Undergraduate Student
+    <br/>
+        | <b>CNY 10,000</b>
+    </td>
+</tr>
 
-![Dotted Divider](./_assets/dotted-divider.png)
-
-![Date on Left Side](./_assets/date-on-left.png)
-
-![Table of Contents](./_assets/toc.png)
-
-![Reading Time](./_assets/reading-time.png)
-
-![Copy Code](./_assets/copy-code.png)
+<tr>
+    <td align="left" style="width: 30%;">Oct. 2024</td>
+    <td align="right" style="width: 70%;">
+        Outstanding Student Award<br/>
+        | <b>CNY 2,000</b>
+    </td>
+</tr>
+</table>
