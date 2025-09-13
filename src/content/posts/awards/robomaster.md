@@ -1,5 +1,6 @@
 ---
 title: "RoboMaster University Championship"
+pubDate: "2025-09-14"
 ---
 
 # RoboMaster University Championship
