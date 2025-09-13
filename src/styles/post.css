@@ -41,14 +41,14 @@
 }
 
 .prose h2 {
-  font-size: 2rem; /* Slightly smaller than h1 */
+  font-size: 1rem; /* Slightly smaller than h1 */
   font-weight: bold;
   color: var(--text-secondary);
   margin: 1.75rem 0 1rem 0;
 }
 
 .prose h3 {
-  font-size: 1.75rem; /* Smaller than h2 */
+  font-size: 0.5rem; /* Smaller than h2 */
   font-weight: bold;
   color: var(--text-tertiary);
   margin: 1.5rem 0 0.75rem 0;
