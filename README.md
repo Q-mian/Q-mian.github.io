@@ -1,99 +1,65 @@
-# Space Ahead ✨ - An Astro v5 Personal Blog Template
+# Chiri 🌸
 
-A minimal space-inspired personal blog template, created by Siddhesh Thadeshwar.
+![screenshot-light](public/screenshots/screenshot-light.png)
+![screenshot-dark](public/screenshots/screenshot-dark.png)
 
-![Space Ahead ✨](/space-ahead-preview.jpeg)
+Chiri is a minimal blog theme built with [Astro](https://astro.build), offering customization options while preserving its clean aesthetic.
 
-See the [demo](https://djsiddz.github.io/space-ahead) to know more.
+Check the [demo](https://astro-chiri.netlify.app/) for more details.
 
-## Theme Features
+## Features
 
-- ✅ Tailwind CSS
-- ✅ Mobile-first responsive layout
-- ✅ Dark and light color mode
-- ✅ Custom About, Contact & 404 pages
-- ✅ Hero section with short bio
-- ✅ Blog content collection
-- ✅ Pagination support
-- ✅ Tags support for blog posts
-- ✅ Subscription form (only UI)
-- ✅ View transitions (via swup.js)
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown support
+- [x] Build with Astro
+- [x] Responsive
+- [x] Light / Dark mode
+- [x] MDX
+- [x] KaTeX
+- [x] Sitemap
+- [x] OpenGraph
+- [x] RSS
+- [ ] Pagination
 
-### Future Scope (Based on requests)
+## Getting Started
 
-- ⏹️ MDX support via @astrojs/mdx integration
-- ⏹️ SEO-friendly with canonical URLs and OpenGraph data
-- ⏹️ New Portfolio/Projects content collection
+1. [Fork](https://github.com/the3ash/astro-chiri/fork) this repository, or use this template to [create a new repository](https://github.com/new?template_name=astro-chiri&template_owner=the3ash).
 
-## Template Integrations
+2. Run the following commands:
 
-- Tailwind v4 via Vite Plugin as per latest Astro docs
-- Swup.js for View Transitions
-- RSS: [@astrojs/rss](https://docs.astro.build/en/guides/rss/)
-- Sitemap: [@astrojs/sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/)
+   ```bash
+   git clone <your-repo-url>
 
-## How to use this template
+   cd <your-repo-name>
 
-### Getting Started
+   pnpm install
 
-1. [Create a new repo](https://github.com/new?template_name=space-ahead&template_owner=djsiddz) using this template.
-2. Clone to repo to your local computer using `git clone <your-repo-url>`. Then `cd <your-repo-name>`.
-3. Setup `pnpm` and use `pnpm install` and then `pnpm dev`.
-4. Use the `src/site.config.ts` file to setup the template to your liking.
-5. Update any content on homepage (`src/pages/index.astro`), about (`src/pages/about.astro`), and contact (`src/pages/contact.astro`).
-6. Replace the template posts under (`src/content/blogs/*.md`) with your blog posts, using the same format, with the post metadata.
-7. Check the [Astro Deployment guide](https://docs.astro.build/en/guides/deploy/) to know specific steps on deploying this on your preferred provider platform.
+   pnpm dev
+   ```
 
-### Project Structure
+3. Edit `src/config.ts` and `src/content/about/about.md` to your liking.
 
-You'll see the following folders and files:
+4. Use `pnpm new <title>` to create new posts, or add your posts to `src/content/posts`.
 
-```text
-├── public/----------------- Contains the site logo (replace with your own).
-├── src/--------------------
-│   ├── assets/------------- Contains svg icons for theme toggle component.
-│   │   └── images/--------- Contains default images for homepage and blog posts.
-│   ├── components/--------- All Astro/Preact components in this theme.
-│   ├── content/------------ Content Collections folder.
-│   │   └── blogs/---------- All the blog posts in *.md files.
-│   ├── icons/-------------- All Astro icon components.
-│   ├── layouts/------------ Shared Layout component.
-│   ├── pages/-------------- Various Astro pages, dynamic pages for blogs, tags; a custom 404 page.
-│   ├── styles/------------- Contains `global.css`, `fonts.css` and `animate.css`.
-│   ├── utils/-------------- Contains helper functions.
-│   ├── content.config.ts--- Content collections definitions.
-│   ├── env.d.ts------------ Contains helper functions.
-│   └── site.config.ts------ Manage your site information and content here.
-├── astro.config.mjs-------- Astro configuration file.
-├── changelog.md------------ Detailed Changelog for this theme.
-├── LICENSE----------------- Theme License.
-├── package.json------------ Dependencies and metadata about this template.
-├── README.md--------------- 📍 You are here.
-└── tsconfig.json----------- Typescript configuration file.
-```
+5. You need to set adapter as follows before deploying to Netlify, Vercel, or other platforms, but you can set `linkCard` to `false` in `src/config.ts` to skip this step:
+   - **Netlify**: `pnpm add @astrojs/netlify` and add `adapter: netlify()` in `astro.config.ts`.
+   - **Vercel**: `pnpm add @astrojs/vercel` and add `adapter: vercel()` in `astro.config.ts`.
+   - **Cloudflare Pages**: `pnpm add @astrojs/cloudflare` and add `adapter: cloudflare()` in `astro.config.ts`.
+   - **Static (e.g. GitHub Pages)**: `pnpm add @astrojs/static` and add `adapter: static()` in `astro.config.ts`.
+   - Refer to [Astro Deployment Guides](https://docs.astro.build/en/guides/deploy/) for more details.
 
-#### Notes
+&emsp;[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start) [![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new) [![Deploy to Cloudflare Pages](https://deploy.workers.cloudflare.com/button)](https://pages.cloudflare.com/start)
 
-- Read & consult [Astro's documentation](https://docs.astro.build/) for up-to-date information and making changes to this template.
-- The `src/components` directory is where we like to put any Astro or Preact components.
-- The `src/content/` directory contains "collections" of related Markdown (and MDX) documents. Use getCollection() to retrieve posts from `src/content/blogs/`, and type-check your frontmatter using an optional schema. See Astro's [Content Collections](https://docs.astro.build/en/guides/content-collections/) docs to learn more.
+## Commands
 
-## Credits and Support Info
+- `pnpm new <title>` - Create a new post (use `_title` for drafts)
+- `pnpm update-theme` - Update the theme to the latest version
 
-### Support Info
+## References
 
-- I provide **paid service** for customizing and setup any of my Astro templates for your projects and startups. Contact me on [Contra](https://contra.com/siddhesht) to know more.
-- Please feel free to create issues for any bugs or feature requests on this theme.
-
-### Credits
-
-- Generated Space Ahead ✨ logo and images for demo blog content using Microsoft Designer.
-- Homepage illustration by <a href="https://icons8.com/illustrations/author/ARh4OKrFtdfC">Pixeltrue Ouch!</a>
-- Inspired from these amazing Astro templates - [Dante](https://github.com/JustGoodUI/dante-astro-theme) & [Chiri](https://github.com/the3ash/astro-chiri). Please do check them out.
+- https://paco.me/
+- https://benji.org/
+- https://shud.in/
+- https://retypeset.radishzz.cc/
 
 ## License
 
-[GNU GPL v3](/LICENSE)
+MIT

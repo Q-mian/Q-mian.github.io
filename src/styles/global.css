@@ -1,146 +1,212 @@
-@import url("animate.css");
-@import url("fonts.css");
-@import "tailwindcss";
+@import './fonts.css';
+@import './post.css';
 
-/* 0. color variables & fonts */
-/* 1. html elements */
-/* 2. utilities */
-
-/* 0. color variables & fonts */
 :root {
-  --space-red: #90393a;
-  --space-yellow: #ffff85;
-  --space-sand: #e2d1c3;
-  --space-stone: #434343;
+  /* Min Content Width */
+  --content-width: 25rem;
+
+  /* Typography */
+  --sans:
+    Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --serif: Besley, Baskerville, Georgia, Cambria, 'Times New Roman', Times, serif;
+  --mono: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+  --font-size-s: 0.8125rem;
+  --font-size-m: 0.9375rem;
+  --font-size-l: 1.0625rem;
+
+  --font-weight-light: 350;
+  --font-weight-regular: 400;
+  --font-weight-bold: 500;
+
+  --spacing-s: -0.08em;
+  --spacing-m: -0.02em;
+
+  /* Light Mode Colors (Default) */
+  --bg: #ffffff;
+  --text-primary: rgba(0, 0, 0, 0.85);
+  --text-secondary: rgba(0, 0, 0, 0.4);
+  --text-tertiary: rgba(0, 0, 0, 0.24);
+  --border: rgba(0, 0, 0, 0.1);
+  --selection: rgba(0, 0, 0, 0.08);
+  --code-bg: rgba(0, 0, 0, 0.04);
+  --mark: #f3ffc4;
+
+  /* Syntax Theme  */
+  --astro-code-foreground: rgba(0, 0, 0, 0.85);
+  --astro-code-background: rgba(0, 0, 0, 0.03);
+  --astro-code-token-constant: rgba(0, 0, 0, 0.85);
+  --astro-code-token-string: rgba(0, 0, 0, 0.85);
+  --astro-code-token-comment: rgba(0, 0, 0, 0.35);
+  --astro-code-token-keyword: rgba(0, 0, 0, 0.55);
+  --astro-code-token-parameter: rgba(0, 0, 0, 0.85);
+  --astro-code-token-function: rgba(0, 0, 0, 0.85);
+  --astro-code-token-string-expression: rgba(0, 0, 0, 0.55);
+  --astro-code-token-punctuation: rgba(0, 0, 0, 0.55);
+  --astro-code-token-link: rgba(0, 0, 0, 0.55);
 }
 
-/* Required to ensure dark: modifiers work when manually toggling mode */
-/* REF: https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually */
-@custom-variant dark (&:where(.dark, .dark *));
+/* Light Mode (Explicit) */
+html.light {
+  --bg: #ffffff;
+  --text-primary: rgba(0, 0, 0, 0.85);
+  --text-secondary: rgba(0, 0, 0, 0.4);
+  --text-tertiary: rgba(0, 0, 0, 0.24);
+  --border: rgba(0, 0, 0, 0.1);
+  --selection: rgba(0, 0, 0, 0.08);
+  --code-bg: rgba(0, 0, 0, 0.04);
+  --mark: #f3ffc4;
 
-@theme {
-  --font-sans: "Kanit", "sans-serif";
-  --color-space-red: var(--space-red);
-  --color-space-yellow: var(--space-yellow);
-  --color-space-sand: var(--space-sand);
-  --color-space-stone: var(--space-stone);
-  --color-whitesmoke: whitesmoke;
+  /* Syntax Theme  */
+  --astro-code-foreground: rgba(0, 0, 0, 0.85);
+  --astro-code-background: rgba(0, 0, 0, 0.03);
+  --astro-code-token-constant: rgba(0, 0, 0, 0.85);
+  --astro-code-token-string: rgba(0, 0, 0, 0.85);
+  --astro-code-token-comment: rgba(0, 0, 0, 0.35);
+  --astro-code-token-keyword: rgba(0, 0, 0, 0.5);
+  --astro-code-token-parameter: rgba(0, 0, 0, 0.85);
+  --astro-code-token-function: rgba(0, 0, 0, 0.85);
+  --astro-code-token-string-expression: rgba(0, 0, 0, 0.55);
+  --astro-code-token-punctuation: rgba(0, 0, 0, 0.55);
+  --astro-code-token-link: rgba(0, 0, 0, 0.55);
 }
 
-/* 1. html elements */
-html,
+/* Dark Mode (Explicit) */
+html.dark {
+  --bg: #1c1c1c;
+  --text-primary: rgba(255, 255, 255, 0.9);
+  --text-secondary: rgba(255, 255, 255, 0.4);
+  --text-tertiary: rgba(255, 255, 255, 0.24);
+  --border: rgba(255, 255, 255, 0.1);
+  --selection: rgba(255, 255, 255, 0.08);
+  --code-bg: rgba(255, 255, 255, 0.04);
+  --mark: #545b37;
+
+  /* Syntax Theme  */
+  --astro-code-foreground: rgba(255, 255, 255, 0.9);
+  --astro-code-background: rgba(255, 255, 255, 0.03);
+  --astro-code-token-constant: rgba(255, 255, 255, 0.9);
+  --astro-code-token-string: rgba(255, 255, 255, 0.9);
+  --astro-code-token-comment: rgba(255, 255, 255, 0.35);
+  --astro-code-token-keyword: rgba(255, 255, 255, 0.55);
+  --astro-code-token-parameter: rgba(255, 255, 255, 0.9);
+  --astro-code-token-function: rgba(255, 255, 255, 0.9);
+  --astro-code-token-string-expression: rgba(255, 255, 255, 0.55);
+  --astro-code-token-punctuation: rgba(255, 255, 255, 0.55);
+  --astro-code-token-link: rgba(255, 255, 255, 0.55);
+}
+
+html {
+  background-color: var(--bg);
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
 body {
-  @apply mx-0 my-auto min-h-screen p-0 text-base;
-  overscroll-behavior: none;
+  font-family: var(--sans);
+  font-feature-settings: 'ss03' 1;
+  font-size: var(--font-size-m);
+  text-autospace: normal;
+  text-rendering: optimizeLegibility;
+  line-height: 1.75;
+  color: var(--text-primary);
+  font-display: swap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  letter-spacing: var(--spacing-m);
+  padding: 6rem 1.5rem 1.5rem 1.5rem;
+  overscroll-behavior-y: contain;
+  transition: background-color 0.2s ease-out;
 }
 
-html.dark body {
-  background-image: linear-gradient(
-    to bottom,
-    var(--color-space-stone) 0%,
-    black 100%
-  );
-  @apply bg-black bg-cover bg-no-repeat text-whitesmoke;
+@media (max-width: 768px) {
+  body {
+    padding: 4rem 1.35rem 1.35rem 1.35rem;
+  }
 }
 
-html.light body {
-  /* background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
-  background-image: linear-gradient(180deg, #fdfcfb 0%, #e2d1c3 100%);
-  @apply bg-space-sand bg-cover bg-no-repeat text-black;
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
 }
 
-/* semantic elements */
-header {
-  @apply sticky top-4 z-20 mr-auto ml-auto flex w-full max-w-3xl flex-col items-center justify-center px-0 py-0 text-base;
+::selection {
+  background-color: var(--selection);
 }
 
-header > nav {
-  @apply flex flex-row items-center justify-between gap-2 rounded-4xl px-5 py-2 text-xs backdrop-blur-3xl sm:gap-8 sm:py-3 sm:text-base;
-  /* inner glow 👇 */
-  box-shadow:
-    inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075),
-    /* shadow ring 👇 */ 0 0 0 1px hsla(0, 0%, 0%, 0.05),
-    /* multiple soft shadows 👇 */ 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
-    0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
-    0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+:focus {
+  outline: 2px solid var(--text-tertiary);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--text-tertiary);
+  outline-offset: 2px;
+}
+
+body[data-width] {
+  max-width: var(--content-width);
+}
+
+body[data-centered='true'] {
+  margin: 0 auto;
 }
 
 main {
-  @apply mx-auto flex flex-col items-start justify-between px-4 pt-0 pb-0 sm:items-center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
-footer {
-  @apply mx-auto mt-12 flex w-full max-w-3xl flex-col flex-wrap items-center justify-center gap-4;
+.date {
+  margin: 0;
+  font-weight: var(--font-weight-light);
+  color: var(--text-secondary);
+  opacity: 0.75;
+  flex-shrink: 0;
+  letter-spacing: var(--spacing-s);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings:
+    'tnum' 1,
+    'zero' 0,
+    'cv01' 1,
+    'cv02' 1,
+    'calt' 1,
+    'ss03' 1,
+    'ordn' 1;
 }
 
-h1 {
-  @apply py-4 text-2xl sm:py-6 sm:text-6xl;
+.date .month {
+  letter-spacing: var(--spacing-m);
 }
 
-h2 {
-  @apply py-2 text-xl sm:py-4 sm:text-3xl;
-}
-
-p {
-  @apply mb-6;
-}
-
-img {
-  @apply h-auto max-w-full rounded-xl;
-}
-
-/* links */
-a.button-link:not(:disabled),
-button.button-link:not(:disabled) {
-  @apply inline-flex cursor-pointer items-center justify-center rounded-full border px-6 py-2 leading-tight transition hover:border-space-red hover:text-space-red sm:px-8 hover:dark:border-space-yellow hover:dark:text-space-yellow;
-}
-a.button-link.space-btn-filled:not(:disabled),
-button.button-link.space-btn-filled:not(:disabled) {
-  @apply bg-black text-whitesmoke hover:border-space-red hover:bg-space-red dark:bg-whitesmoke dark:text-black dark:hover:border-space-yellow dark:hover:bg-space-yellow;
-}
-a.button-link.space-btn-outlined:not(:disabled),
-button.button-link.space-btn-outlined:not(:disabled) {
-  @apply border border-black bg-transparent text-black hover:border-space-red hover:text-space-red dark:border-whitesmoke dark:bg-transparent dark:text-whitesmoke dark:hover:border-space-yellow dark:hover:text-space-yellow;
-}
-
-html.dark a:not(.button-link) {
-  @apply text-whitesmoke;
-}
-
-html.light a:not(.button-link) {
-  @apply text-black;
-}
-
-html.light a:not(.button-link):hover {
-  @apply text-space-red;
-}
-
-html.dark a:not(.button-link):hover {
-  @apply text-space-yellow;
-}
-
-.page-content {
-  @apply my-12 w-full px-4 text-center;
-}
-
-@keyframes cursor-blink {
-  0% {
-    opacity: 0;
-  }
-}
-
-.blinking {
-  animation: cursor-blink 1.2s steps(2) infinite;
-}
-
-@media (orientation: portrait) {
-  .page-content {
-    text-align: left;
-  }
-}
-
-@media (max-width: 315px) {
-  section {
-    gap: 3rem;
-  }
+.sr-only {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
