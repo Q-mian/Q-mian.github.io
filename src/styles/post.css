@@ -43,7 +43,7 @@
 
 /* Adjusting heading styles for better clarity */
 .prose h1 {
-  font-size: 2.5rem; /* Larger font size for main headings */
+  font-size: 1.5rem; /* Larger font size for main headings */
   font-weight: bold;
   color: var(--text-primary);
   margin: 2rem 0 1rem 0; /* Add spacing above and below */

@@ -1,5 +1,5 @@
 ---
-title: "RoboMaster University Championship"
+title: "RoboMaster Championship"
 pubDate: "2025-09-14"
 ---
 
