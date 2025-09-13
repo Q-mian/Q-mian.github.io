@@ -1,0 +1,23 @@
+---
+import { type CollectionEntry, getCollection, render } from 'astro:content'
+import PostLayout from '@/layouts/PostLayout.astro'
+
+export async function getStaticPaths() {
+  const awards = await getCollection('awards')
+  return awards
+    .filter((a) => !a.id.startsWith('_'))
+    .map((a) => ({ params: { slug: a.id }, props: a }))
+}
+
+type Props = CollectionEntry<'awards'>
+
+const award = Astro.props
+const { Content, remarkPluginFrontmatter } = await render(award)
+
+const readingTime = remarkPluginFrontmatter.readingTime
+const toc = remarkPluginFrontmatter.toc || []
+---
+
+<PostLayout {...award.data} readingTime={readingTime} toc={toc}>
+  <Content />
+</PostLayout>
