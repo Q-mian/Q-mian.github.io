@@ -63,10 +63,11 @@
   margin: 1.5rem 0 0.75rem 0;
 }
 
-/* Bold text */
-.prose strong,
-.prose b {
-  font-weight: var(--font-weight-bold);
+/* Ensure bold text is properly styled */
+.prose b,
+.prose strong {
+  font-weight: bold; /* Explicitly set bold font weight */
+  color: inherit; /* Ensure it inherits the text color */
 }
 
 /* Italic text */
