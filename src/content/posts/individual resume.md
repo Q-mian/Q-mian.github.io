@@ -30,7 +30,7 @@ body {
 <div align="left">
     <img src="/og/Langya.jpg" width="50" style="float:left; margin-right:15px;" />
     <div style="display:inline-block;">
-        <b>LangYa, RoboMaster Team of HUST</b><br/>
+        <b>LangYa, RoboMaster Team of  HUST</b><br/>
         Oct.2023-now,Vision Group Member<br/>
         Supervised by Dr. Yujiang Zeng<br/>
         <br/>
@@ -42,6 +42,7 @@ body {
     <div style="text-align: left;">Aug. 2025</div>
     <div style="text-align: right;">
         RoboMaster University Championship | <b>National Second Prize</b>
+        <a href="/awards/robomaster" target="_blank" style="margin-left: 10px;">Learn more</a>
     </div>
 </div>
 
