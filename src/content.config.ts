@@ -33,4 +33,15 @@ const awards = defineCollection({
     })
 })
 
-export const collections = { posts, about, awards }
+const blogs = defineCollection({
+  // Load Markdown and MDX files in the `src/content/blogs/` directory.
+  loader: glob({ base: './src/content/blogs', pattern: '**/*.{md,mdx}' }),
+  // Use the same schema as posts
+  schema: () =>
+    z.object({
+      title: z.string(),
+      pubDate: z.coerce.date(),
+      image: z.string().optional()
+    })
+})
+export const collections = { posts, about, awards, blogs }

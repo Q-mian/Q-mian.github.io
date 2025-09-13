@@ -3,13 +3,13 @@ import { type CollectionEntry, getCollection, render } from 'astro:content'
 import PostLayout from '@/layouts/PostLayout.astro'
 
 export async function getStaticPaths() {
-  const posts = await getCollection('posts')
-  return posts
+  const blogs = await getCollection('blogs')
+  return blogs
     .filter((p) => !p.id.startsWith('_'))
     .map((p) => ({ params: { slug: p.id }, props: p }))
 }
 
-type Props = CollectionEntry<'posts'>
+type Props = CollectionEntry<'blogs'>
 
 const post = Astro.props
 const { Content, remarkPluginFrontmatter } = await render(post)
