@@ -49,7 +49,7 @@ body {
 <div style="display: flex; justify-content: space-between; align-items: center;">
     <div style="text-align: left;">Oct. 2024</div>
     <div style="text-align: right;">
-        DIGIX Global AI Challenge | <b>National Th3ird Prize</b>
+        DIGIX Global AI Challenge | <b>National Third Prize</b>
     </div>
 </div>
 
