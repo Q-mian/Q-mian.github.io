@@ -21,8 +21,8 @@ body {
     <img src="/og/hust.png" width="100" style="float:left; margin-right:15px;" />
     <div style="display:inline-block;">
         2022-2026<br/>
-        B.Eng of Artificial Intelligence HUST<br/>
-        GRADE: 97.31/106, Rank: 1/122<br/>
+        B.Eng of Artificial Intelligence,HUST<br/>
+        Grade: 97.31/106, Rank: 1/122<br/>
         <br/>
 </div>
 
@@ -48,7 +48,7 @@ body {
 <div style="display: flex; justify-content: space-between; align-items: center;">
     <div style="text-align: left;">Oct. 2024</div>
     <div style="text-align: right;">
-        DIGIX Global AI Challenge | <b>National Third Prize</b>
+        DIGIX Global AI Challenge | <b>National Th3ird Prize</b>
     </div>
 </div>
 
