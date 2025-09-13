@@ -21,7 +21,6 @@ body {
     <div style="display:inline-block;">
         2022-2026<br/>
         B.Eng of Artificial Intelligence<br/>
-
 </div>
 
 ## Research
@@ -31,7 +30,6 @@ body {
         Oct.2023-now,<b>Vision Group Member</b><br/>
         LangYa, RoboMaster Team of HUST<br/>
         Supervised by Dr. Yujiang Zeng<br/>
-<br/> <!-- 这里添加分行符号 -->
 </div>
 
 
