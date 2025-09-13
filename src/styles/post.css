@@ -32,6 +32,15 @@
   margin: 3.75em 0 1.75em 0;
 }
 
+/* Ensure headings are properly aligned without extra spaces */
+.prose h1,
+.prose h2,
+.prose h3 {
+  margin-left: 0; /* Remove any left margin */
+  padding-left: 0; /* Remove any left padding */
+  text-indent: 0; /* Ensure no text indentation */
+}
+
 /* Adjusting heading styles for better clarity */
 .prose h1 {
   font-size: 2.5rem; /* Larger font size for main headings */

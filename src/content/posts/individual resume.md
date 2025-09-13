@@ -14,21 +14,25 @@ body {
 
 **Research interests**: Multimodal Large Language Model,  Machine Learning, Computer Vision and Robotics.
 
+
+
 ## Education
 
 <div align="left">
-    <img src="/og/hust.png" width="50" style="float:left; margin-right:15px;" />
+    <img src="/og/hust.png" width="100" style="float:left; margin-right:15px;" />
     <div style="display:inline-block;">
         2022-2026<br/>
-        B.Eng of Artificial Intelligence<br/>
+        B.Eng of Artificial Intelligence Huazhong University of Science and Technology<br/>
 </div>
+
+
 
 ## Research
 <div align="left">
     <img src="/og/Langya.jpg" width="50" style="float:left; margin-right:15px;" />
     <div style="display:inline-block;">
-        Oct.2023-now,<b>Vision Group Member</b><br/>
-        LangYa, RoboMaster Team of HUST<br/>
+        <b>LangYa, RoboMaster Team of HUST</b><br/>
+        Oct.2023-now,Vision Group Member<br/>
         Supervised by Dr. Yujiang Zeng<br/>
 </div>
 
