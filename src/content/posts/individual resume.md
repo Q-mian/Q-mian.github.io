@@ -41,8 +41,8 @@ body {
 <div style="display: flex; justify-content: space-between; align-items: center;">
     <div style="text-align: left;">Aug. 2025</div>
     <div style="text-align: right;">
-        RoboMaster University Championship | <b>National Second Prize</b>
-        <a href="/awards/robomaster" target="_blank" style="margin-left: 10px;">Learn more</a>
+        RoboMaster University Championship |
+        <a href="/awards/robomaster" target="_blank" style="margin-left: 10px;"><b>National Second Prize</b></a>
     </div>
 </div>
 
