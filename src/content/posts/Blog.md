@@ -1,4 +1,4 @@
 ---
-title: 'The TR-808 Story'
-pubDate: '2025-05-10'
+title: 'blog'
+pubDate: '2025-09-14'
 ---

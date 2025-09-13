@@ -18,7 +18,7 @@ body {
 ## Education
 
 <div align="left">
-    <img src="/og/hust.png" width="100" style="float:left; margin-right:15px;" />
+    <img src="/og/hust.png" width="50" style="float:left; margin-right:15px;" />
     <div style="display:inline-block;">
         2022-2026<br/>
         B.Eng of Artificial Intelligence,HUST<br/>

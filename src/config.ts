@@ -6,7 +6,7 @@ export const themeConfig: ThemeConfig = {
     website: 'https://astro-chiri.netlify.app/', // Site domain
     title: 'Qmian', // Site title
     author: 'qmian', // Author name
-    description: 'Minimal blog built by Astro', // Site description
+    description: 'qmian blog', // Site description
     language: 'zh-CN' // Default language
   },
 
