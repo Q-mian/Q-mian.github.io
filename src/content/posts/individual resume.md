@@ -14,6 +14,8 @@ body {
 
 **Research interests**: Multimodal Large Language Model,  Machine Learning, Computer Vision and Robotics.
 
+**Email**: [q2mian@163.com](mailto:q2mian@163.com)
+
 
 ## Education
 
