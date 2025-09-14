@@ -14,7 +14,7 @@ You can leave this empty if you don’t want to show any content.
 Hi，This is Q-mian's personal blog, where I share my learning journey and research findings in the fields of Artificial Intelligence, Machine Learning, Computer Vision, and Robotics.
 
 <div style="text-align: center; margin-top: 1rem;">
-  <img src="/og/about.png" style="display:block; margin:1rem auto; width:300px;" alt="About" />
+  <img src="/og/about.gif" style="display:block; margin:1rem auto; max-width:100%; width:480px; border-radius:8px;" alt="About" />
 </div>
 
 <div style="text-align: center; margin-top: 1rem;">
