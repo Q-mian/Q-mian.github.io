@@ -2,7 +2,12 @@
 title: "RoboMaster Championship"
 pubDate: "2025-09-14"
 ---
-
+<style>
+body {
+    font-family: "Times New Roman", Times, serif;
+}
+</style>
+<img src="/og/qmian.png" width="100" align="right" />
 ![RoboMaster Championship](/og/rmaw.jpg)
 
 The RoboMaster University Championship (RMUC) provides participants with a comprehensive opportunity to enhance their practical engineering skills. It integrates multiple robotics-related disciplines, including machine vision, embedded system design, mechanical engineering, autonomous navigation, and human-computer interaction. The stylish presentation makes RMUC even more exciting, attracting audiences from all walks of life and further spreading the love for robotics.
