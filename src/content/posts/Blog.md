@@ -9,7 +9,6 @@ body {
     font-family: "Times New Roman", Times, serif;
 }
 </style>
-<img src="/og/qmian.png" width="100" align="right" />
 <div style="display: flex; justify-content: space-between; align-items: center;">
     <div style="text-align: left;">Jul. 2025</div>
     <div style="text-align: right;">
