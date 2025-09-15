@@ -10,6 +10,53 @@ body {
 }
 </style>
 
+<style>
+:root { --bg-overlay: rgba(0,0,0,0.55); }
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    font-family: "Times New Roman", Times, serif;
+    background: url('/og/AutoAim/RM.gif') center/cover no-repeat fixed;
+    background-color: #000;
+    color: #fff;
+}
+.bg-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--bg-overlay);
+    pointer-events: none;
+}
+.main-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: rgba(0,0,0,0.35);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.main-content img { max-width: 100%; height: auto; display: block; margin: 1rem 0; }
+</style>
+
+<style>
+/* Make all headings inside the page white for better contrast */
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6 {
+    color: #ffffff !important;
+}
+.main-content p { color: #f3f3f3; }
+</style>
+</style>
+
+<div class="bg-overlay" aria-hidden="true"></div>
+<div class="main-content">
 
 在RM战队待了快三年，从小登到老登，学了不少关于智能机器人的技术。现在的RM比赛技术大爆炸，不少团队的自瞄都能达到很精准的水平。写下这个“过时的自瞄”系列，算是给自己一个交代吧。
 
@@ -96,3 +143,4 @@ PNP算法本质上就是在已知相机内存矩阵的条件下，通过多组�
 2. 云台坐标系：该坐标系原点位于机器人云台转轴交点处，坐标轴方向为以机器人云台pitch从坐标系原点到pitch轴发射原点为x轴正方向，从原点指向上侧为z轴正方向的一个笛卡尔坐标系。
 3. 惯性坐标系：该坐标系原点与机器人云台坐标系原点相同，坐标系方向与世界坐标系方向相同。
 在实现坐标变换时，首先通过平移变换将相机空间坐标系下的坐标变换到云台坐标系，然后利用机器人云台的IMU数据将云台坐标系下的坐标进行旋转变换变换到惯性坐标系下。
+</div>
