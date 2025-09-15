@@ -11,12 +11,11 @@ body {
 </style>
 
 <style>
-:root { --bg-overlay: rgba(255,255,255,0.55); }
+:root { --bg-overlay: rgba(0,0,0,0.55); }
 html, body {
     height: 100%;
     margin: 0;
 }
-.main-content p { color: #f3f3f3; }
 body {
     font-family: "Times New Roman", Times, serif;
     background: url('/og/AutoAim/RM.gif') center/cover no-repeat fixed;
@@ -35,25 +34,11 @@ body {
     max-width: 900px;
     margin: 3rem auto;
     padding: 2rem;
-    background: rgba(255,255,255,0.85);
+    background: rgba(252, 252, 252, 0.35);
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 30px rgba(110, 110, 110, 0.5);
 }
 .main-content img { max-width: 100%; height: auto; display: block; margin: 1rem 0; }
-</style>
-
-<style>
-/* Make all headings inside the page white for better contrast */
-.main-content h1,
-.main-content h2,
-.main-content h3,
-.main-content h4,
-.main-content h5,
-.main-content h6 {
-    color: #111111 !important;
-}
-.main-content p { color: #222222; }
-</style>
 </style>
 
 <div class="bg-overlay" aria-hidden="true"></div>
