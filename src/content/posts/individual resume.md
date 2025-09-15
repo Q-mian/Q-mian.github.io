@@ -97,3 +97,11 @@ body {
         Academic Excellence Scholarship | <b>CNY 1,200</b>
     </div>
 </div>
+
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="text-align: left;">Mar. 2023</div>
+    <div style="text-align: right;">
+        Academic Excellence Scholarship | <b>CNY 600</b>
+    </div>
+</div>
