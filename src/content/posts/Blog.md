@@ -1,7 +1,18 @@
 ---
 title: 'blog'
-pubDate: '2025-09-14'
+pubDate: '2025-09-15'
 ---
+
+
+
+
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="text-align: left;">Sep. 2025</div>
+    <div style="text-align: right;">
+        <a href="/blogs/robomaster-autoaim/"  style="margin-left: 10px;">RoboMaster自瞄</a>
+    </div>
+</div>
 
 
 <style>
@@ -12,6 +23,6 @@ body {
 <div style="display: flex; justify-content: space-between; align-items: center;">
     <div style="text-align: left;">Jul. 2025</div>
     <div style="text-align: right;">
-        <a href="/blogs/你不再是从前的你/"  style="margin-left: 10px;">你不再是从前的你</b></a>
+        <a href="/blogs/you-are-not-the-same/"  style="margin-left: 10px;">你不再是从前的你</a>
     </div>
 </div>

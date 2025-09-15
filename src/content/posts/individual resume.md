@@ -48,6 +48,16 @@ body {
     </div>
 </div>
 
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="text-align: left;">Jun. 2025</div>
+    <div style="text-align: right;">
+        RoboMaster University Championship Regionals | <b>Frist Prize</b>
+    </div>
+</div>
+
+
+
 <div style="display: flex; justify-content: space-between; align-items: center;">
     <div style="text-align: left;">Oct. 2024</div>
     <div style="text-align: right;">
@@ -62,6 +72,8 @@ body {
     </div>
 </div>
 
+
+
 ## Honors
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -75,5 +87,13 @@ body {
     <div style="text-align: left;">Oct. 2024</div>
     <div style="text-align: right;">
         Outstanding Student Award | <b>CNY 2,000</b>
+    </div>
+</div>
+
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="text-align: left;">Oct. 2023</div>
+    <div style="text-align: right;">
+        Academic Excellence Scholarship | <b>CNY 1,200</b>
     </div>
 </div>
