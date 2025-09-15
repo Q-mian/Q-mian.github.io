@@ -11,6 +11,10 @@ This content will be displayed at the top of the index page.
 You can leave this empty if you don’t want to show any content.
 -->
 
+
+<div style="text-align: right; margin-top: 0.5rem;"><a href="/blogs/friends/" style="text-decoration:none; color:inherit;"><strong>友链</strong></a></div>
+
+
 Hi，This is Q-mian's personal blog, where I share my learning journey and research findings in the fields of Artificial Intelligence, Machine Learning, Computer Vision, and Robotics.
 
 <div style="text-align: center; margin-top: 1rem;">
