@@ -1,0 +1,130 @@
+---
+import { useEffect, useState } from 'react'
+// This Astro component is intentionally rendered on the client only.
+// It provides a small play/pause control and remembers the user's choice.
+const STORAGE_KEY = 'bgm-play'
+const AUDIO_SRC = '/audio/很遗憾我们不能再见面了.flac'
+---
+
+<script type="module" client:load>
+  // Use plain DOM APIs to avoid adding React as a runtime dependency.
+  const STORAGE_KEY = 'bgm-play'
+  const AUDIO_SRC = '/audio/很遗憾我们不能再见面了.flac'
+
+  let audio = null
+  function createAudio() {
+    const a = new Audio(AUDIO_SRC)
+    a.loop = true
+    a.preload = 'auto'
+    a.crossOrigin = 'anonymous'
+    return a
+  }
+
+  function updateButton(isPlaying) {
+    const btn = document.querySelector('#bgm-toggle')
+    if (!btn) return
+    btn.setAttribute('aria-pressed', String(!!isPlaying))
+    btn.textContent = isPlaying ? '⏸️' : '▶️'
+  }
+
+  function tryPlay() {
+    if (!audio) audio = createAudio()
+    // Try to play unmuted first (preferred). If that fails, try muted autoplay
+    // which many browsers allow, then wait for the first user interaction to
+    // unmute so the audio becomes audible.
+    audio.muted = false
+    audio.play().then(() => {
+      updateButton(true)
+      localStorage.setItem(STORAGE_KEY, '1')
+    }).catch(() => {
+      // Unmuted autoplay blocked. Try muted autoplay as a fallback.
+      audio.muted = true
+      audio.play().then(() => {
+        updateButton(true)
+        // We can't mark the user as intentionally enabled yet; keep '0' until
+        // they interact to unmute.
+        localStorage.setItem(STORAGE_KEY, '0')
+        // After muted autoplay succeeds, enable unmute on first interaction.
+        waitForInteractionToUnmute()
+      }).catch(() => {
+        // Muted autoplay also blocked or failed.
+        updateButton(false)
+        localStorage.setItem(STORAGE_KEY, '0')
+      })
+    })
+  }
+
+  function pause() {
+    if (!audio) return
+    audio.pause()
+    updateButton(false)
+    localStorage.setItem(STORAGE_KEY, '0')
+  }
+
+  function toggle() {
+    const isPlaying = localStorage.getItem(STORAGE_KEY) === '1'
+    if (isPlaying) {
+      pause()
+    } else {
+      tryPlay()
+    }
+  }
+
+  function waitForInteractionToUnmute() {
+    const handler = () => {
+      if (!audio) audio = createAudio()
+      // Some browsers require setting muted=false before play.
+      audio.muted = false
+      audio.play().then(() => {
+        updateButton(true)
+        localStorage.setItem(STORAGE_KEY, '1')
+      }).catch(() => {
+        // Still blocked; leave it muted.
+        updateButton(false)
+        localStorage.setItem(STORAGE_KEY, '0')
+      })
+      document.removeEventListener('click', handler)
+      document.removeEventListener('keydown', handler)
+      document.removeEventListener('touchstart', handler)
+    }
+    document.addEventListener('click', handler)
+    document.addEventListener('keydown', handler)
+    document.addEventListener('touchstart', handler)
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem(STORAGE_KEY)
+    const btn = document.querySelector('#bgm-toggle')
+    if (!btn) return
+    btn.addEventListener('click', toggle)
+    // If the user previously enabled music (saved === '1') OR there is
+    // no saved preference yet (saved === null), try to play by default.
+    // Browsers may block autoplay; in that case tryPlay() will catch and
+    // leave the control in the paused state.
+    if (saved === '1' || saved === null) {
+      tryPlay()
+    } else {
+      updateButton(false)
+    }
+  })
+</script>
+
+<style>
+  .bgm-control {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 9999;
+    background: rgba(255,255,255,0.9);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 999px;
+    padding: 0.25rem 0.5rem;
+    box-shadow: 0 6px 20px rgba(2,6,23,0.08);
+    font-size: 1rem;
+    backdrop-filter: blur(6px);
+  }
+</style>
+
+<div class="bgm-control" role="region" aria-label="背景音乐控制">
+  <button id="bgm-toggle" aria-pressed="false" title="播放/暂停背景音乐">▶️</button>
+</div>
