@@ -35,3 +35,11 @@ body {
         <a href="/blogs/you-abandoned-flower/"  style="margin-left: 10px;">你遗弃了的花瓣，是我周旋好久的盛夏</a>
     </div>
 </div>
+
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="text-align: left;">Jan. 2026</div>
+    <div style="text-align: right;">
+        <a href="/blogs/idt/"  style="margin-left: 10px;">I don't think this letter will reach you</a>
+    </div>
+</div>

@@ -1,6 +1,6 @@
 ---
 title: 'Individual resume'
-pubDate: '2025-09-14'
+pubDate: '2026-01-15'
 ---
 
 <style>
@@ -8,11 +8,11 @@ body {
     font-family: "Times New Roman", Times, serif;
 }
 </style>
-<img src="/og/qmian.png" width="100" align="right" />
+<img src="/og/qmian_new.png" width="100" align="right" />
 
 ## Mingyuan Qin
 
-**Research interests**: Multimodal Large Language Model,  Machine Learning, Computer Vision and Robotics.
+**Research interests**:Large Language Model,  Machine Learning, Computer Vision and Robotics.
 
 **Email**: [q2mian@163.com](mailto:q2mian@163.com)
 
@@ -23,20 +23,30 @@ body {
     <img src="/og/hust.png" width="50" style="float:left; margin-right:15px;" />
     <div style="display:inline-block;">
         2022-2026<br/>
-        B.Eng of Artificial Intelligence,HUST<br/>
+        B.Eng of Artificial Intelligence, HUST<br/>
         Grade: 97.31/106, Rank: 1/122<br/>
         <br/>
 </div>
 
 ## Research
-<div align="left">
-    <img src="/og/Langya.jpg" width="50" style="float:left; margin-right:15px;" />
-    <div style="display:inline-block;">
-        <b>LangYa, RoboMaster Team of  HUST</b><br/>
-        Oct.2023-now,Vision Group Member<br/>
-        Supervised by Dr. Yujiang Zeng<br/>
-        <br/>
+<div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+<img src="/og/Langya.jpg" width="50" style="margin-right: 15px; flex-shrink: 0;" />
+<div>
+<b>LangYa, RoboMaster Team of HUST</b><br/>
+Oct.2023-Sep.2025, Vision Group Member<br/>
+Supervised by Dr. Yujiang Zeng
 </div>
+</div>
+
+<div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+<img src="/og/Langyi.png" width="50" style="margin-right: 15px; flex-shrink: 0;" />
+<div>
+<b>LangYi Robotics</b><br/>
+Sep.2025-Dec.2025, Research and Development Intern
+</div>
+</div>
+
+
 
 ## Awards
 
@@ -75,6 +85,13 @@ body {
 
 
 ## Honors
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="text-align: left;">Oct. 2025</div>
+    <div style="text-align: right;">
+        Outstanding Student Award | <b>CNY 2,000</b>
+    </div>
+</div>
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
     <div style="text-align: left;">Oct. 2024</div>
